@@ -1,0 +1,53 @@
+:root {
+    --text-shadow-offset: 0.0160em; /* Shadow offset defined as a variable */
+    --desc-colour-outline: white;
+}
+
+
+#card-component-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+#card-title {
+  user-select: none; /* Prevent text selection */
+  cursor: default; /* Set cursor to the default type */
+
+  max-width: 70vw; /* Ensure it doesn't exceed 70% of the viewport width */
+
+  text-align: center; 
+  text-transform: uppercase; /* Make text all caps */
+  font-family: 'Fredoka One', cursive, sans-serif;
+  font-size: 8em; /* Very large font size */
+  color: white;
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 
+    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 #000,
+    var(--text-shadow-offset) var(--text-shadow-offset) 0 #000;
+}
+ 
+#card-description {
+  user-select: none; /* Prevent text selection */
+  text-transform: uppercase; /* Make text all caps */
+
+  font-family: 'Bangers', cursive, sans-serif;
+  font-size: 5em; 
+  color: black;
+  text-shadow: 
+    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 var(--desc-colour-outline),
+    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 var(--desc-colour-outline),
+    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 var(--desc-colour-outline),
+    var(--text-shadow-offset) var(--text-shadow-offset) 0 var(--desc-colour-outline);
+
+  width: 70%;
+  max-width: 70vw; /* Ensure it doesn't exceed 70% of the viewport width */
+  margin: 0 auto; /* Center the element horizontally */
+  text-align: center; 
+  letter-spacing: 0.08em; 
+
+}

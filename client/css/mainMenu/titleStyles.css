@@ -1,0 +1,168 @@
+:root {
+    --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
+    --label-and-button-font-size: 1.6em;
+}
+
+/* Global body and html styling to ensure full coverage without scrollbars */
+html, body {
+  height: 100%; /* Ensures the body takes the full viewport height */
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  overflow: hidden; /* Hides any overflow, thus removing scrollbars */
+}
+
+/* Main menu container styling */
+#main-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+}
+
+/* Header styling */
+h2 {
+  font-family: 'Arial', sans-serif; /* Example of a different style font */
+  font-size: 7em; /* Very large font size */
+  color: lightblue;
+  margin-bottom: 1.25em; /* Space below the header */
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 
+    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 #000,
+    var(--text-shadow-offset) var(--text-shadow-offset) 0 #000;
+  user-select: none; /* Prevent text selection */
+  cursor: default; /* Set cursor to the default type */
+}
+
+/* Names container styling */
+#names-container {
+  display: flex;
+  align-items: center; /* Align items vertically in the middle */
+  gap: 0.625em; /* Space between elements */
+}
+
+/* Input field styling */
+input {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: orange; /* Background color */
+  border-radius: 0.625em; /* Rounded corners */
+  border: none; /* Remove default border */
+  padding: 0.625em; /* Padding inside the input box */
+  color: white; /* Font color */
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 1s;
+}
+
+/* Button styling with tilt animation */
+button {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: lightgreen; /* Light green background */
+  border: none; /* No border */
+  border-radius: 0.625em; /* Rounded corners */
+  padding: 0.625em 1.25em; /* Padding around the text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  display: inline-block; /* Necessary for transform animations */
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 2s;
+}
+
+.play-button {
+  background-color: lightblue; /* Light green background */
+  animation-delay: 0.2s;
+  margin-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+#remove-name-button {
+  background-color: red;
+  animation-delay: 0.1s;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 1em;
+}
+
+#play-button2 {
+  animation: spin 1s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 1s;
+}
+
+#play-button3 {
+  animation-delay: 3s;
+}
+
+button:hover {
+  background-color: #98fb98; /* Slightly lighter green when hovered */
+}
+
+/* Label styling */
+label {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: lightsalmon; /* Background color */
+  border-radius: 0.625em; /* Rounded corners */
+  border: none; /* Remove default border */
+  padding: 0.625em; /* Padding inside the input box */
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+}
+
+/* Make sure to link to the Google Fonts for any specific fonts you use */
+
+
+/* Main element styling */
+main {
+  position: absolute; /* Makes the main element absolutely positioned */
+  top: 0; /* Aligns the top of the main element with the viewport */
+  left: 0; /* Aligns the left of the main element with the viewport */
+  right: 0; /* Ensures it extends to the right edge of the viewport */
+  bottom: 0; /* Ensures it extends to the bottom edge of the viewport */
+  animation: swishColorChange 10s infinite; /* Infinite animation over 10 seconds */
+}
+
+/* Keyframes for color change animation */
+@keyframes swishColorChange {
+  0% {
+    background-color: #f49ac2; /* Light pink */
+  }
+  25% {
+    background-color: #cb99c9; /* Lavender */
+  }
+  50% {
+    background-color: #c23b22; /* Light green */
+  }
+  75% {
+    background-color: #ffd1dc; /* Peach */
+  }
+  100% {
+    background-color: #f49ac2; /* Light pink */
+  }
+}
+
+
+/* Keyframes for tilt animation */
+@keyframes tilt {
+  25% {
+    transform: rotate(10deg); /* Rotate 20 degrees clockwise */
+  }
+  75% {
+    transform: rotate(-10deg); /* Rotate 20 degrees counter-clockwise */
+  }
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); 
+  }
+  0% {
+    transform: rotate(0deg); 
+  }
+}
+
+
+

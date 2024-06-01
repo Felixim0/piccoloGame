@@ -1,0 +1,49 @@
+/* Main element styling */
+main {
+  position: absolute; /* Position it absolutely within its relative parent */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.solidRed {
+  background: red;
+}
+
+.solidBlue {
+  background: blue;
+}
+
+.solidGreen {
+  background: green;
+}
+
+.solidOrange {
+  background: orange;
+}
+
+.solidPurple {
+  background: purple;
+}
+
+.solidPink {
+  background: pink;
+}
+
+.solidCyan {
+  background: cyan;
+}
+
+.solidMagenta {
+  background: magenta; 
+}
+
+.solidLime {
+  background: lime;
+}
+
+.solidTurquoise {
+  background: turquoise;
+}

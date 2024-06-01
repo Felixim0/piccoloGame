@@ -1,0 +1,16 @@
+
+.invisible {
+  display: none !important;
+}
+
+.noAnimation {
+  animation: none !important;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Hides any overflow, thus removing scrollbars */
+}
+
