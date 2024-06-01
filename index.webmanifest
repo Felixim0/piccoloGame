@@ -1,0 +1,33 @@
+{
+  "name": "Piccaloe",
+  "short_name": "pic",
+  "description": "Fun challenge / drinking / dare game.",
+  "start_url": "/client/",
+  "display": "standalone",
+  "theme_color": "#336699",
+  "background_color": "#FFFFFF",
+
+  "icons": [
+	  {
+	    "src": "./icons/-256.png",
+	    "sizes": "256x256",
+	    "type": "image/png"
+	  }
+  ],
+    "screenshots": [
+    {
+     "src": "pwa/screenshots/wide/wide1.png",
+     "sizes": "2396×1542",
+     "type": "image/gif",
+     "form_factor": "wide",
+     "label": "Homescreen Piccaloe"
+    },
+    {
+     "src": "pwa/screenshots/narrow/narrow1.png",
+      "sizes": "1120×1580",
+      "type": "image/gif",
+      "form_factor": "narrow",
+      "label": "Homescreen Piccaloe"
+    }
+ ]
+}
