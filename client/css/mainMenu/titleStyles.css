@@ -1,6 +1,7 @@
 :root {
     --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
-    --label-and-button-font-size: 1.6em;
+    --label-and-button-font-size: 1m;
+    --title-size: 3em;
 }
 
 /* Global body and html styling to ensure full coverage without scrollbars */
@@ -13,19 +14,44 @@ html, body {
 
 /* Main menu container styling */
 #main-menu {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between items */
+}
+
+#main-menu > * {
+  width: 100%; /* Ensure items take full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title-container {
+  /* Flexbox that organises items one on top of the other, centered */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
 }
+
+#middle-menu{
+  /* Flexbox that organises items one on top of the other, centered */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Header styling */
 h2 {
   font-family: 'Arial', sans-serif; /* Example of a different style font */
-  font-size: 7em; /* Very large font size */
+  font-size: var(--title-size);
   color: lightblue;
-  margin-bottom: 1.25em; /* Space below the header */
   font-weight: bold; /* Makes the text bold */
   text-shadow: 
     calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 #000,

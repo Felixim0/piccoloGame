@@ -1,6 +1,8 @@
 :root {
     --text-shadow-offset: 0.0160em; /* Shadow offset defined as a variable */
     --desc-colour-outline: white;
+    --title-size: 3em;
+    --description-size: 1em;
 }
 
 
@@ -21,7 +23,7 @@
   text-align: center; 
   text-transform: uppercase; /* Make text all caps */
   font-family: 'Fredoka One', cursive, sans-serif;
-  font-size: 8em; /* Very large font size */
+  font-size: var(--title-size);
   color: white;
   font-weight: bold; /* Makes the text bold */
   text-shadow: 
@@ -36,7 +38,7 @@
   text-transform: uppercase; /* Make text all caps */
 
   font-family: 'Bangers', cursive, sans-serif;
-  font-size: 5em; 
+  font-size: var(--description-size);
   color: black;
   text-shadow: 
     calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 var(--desc-colour-outline),
