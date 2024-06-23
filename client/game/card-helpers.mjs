@@ -1,45 +1,12 @@
 import { generateCardElements } from '../helpers/element-creation.mjs';
 
-function assignNamesToCards(cards, names) {
-  // TODO replace "$name1" and "$name2" and "$name3" with names as appropriate
-
-  // Array of name objects to track usage of names and make even
-  const nameUsage = names.map(name => ({ name: name, usage: 0 }));
-
-  for (const card of cards) {
-    // TODO this bit
-    console.log(card);
-  }
-  return cards;
-}
-
-export function populateCard(cards) {
-  const cardElements = document.querySelector('#card-component-container');
-  const cardTitle = cardElements.querySelector('#card-title');
-  const cardDesc = cardElements.querySelector('#card-description');
-
-  const topCard = cards[0];
-  cardTitle.textContent = topCard.title;
-  cardDesc.textContent = topCard.description;
-}
-
-export function addCardElements() {
-  const mainPage = document.querySelector('main');
-  const containedElements = generateCardElements();
-  mainPage.append(containedElements);
-}
-
-function shuffleCards(cards) {
-  for (let i = cards.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [cards[i], cards[j]] = [cards[j], cards[i]];
-  }
-  return cards;
-}
-
 function getDecksToAdd(names) {
   console.log(names);
   return ['p0Cards', 'p1Cards', 'p2Cards'];
+}
+
+function mergeDecks(targetDeck, sourceDeck) {
+  targetDeck.push(...sourceDeck);
 }
 
 export async function getMergedCardDeck(names) {
@@ -73,29 +40,71 @@ function cherryPickCards(deck) {
   const deckMakeup = [
     { cardType: 'rule', numberOfCards: 4 },
     { cardType: 'describe', numberOfCards: 2 },
-    { cardType: 'misc', numberOfCards: 1 },
     { cardType: 'challenge', numberOfCards: 2 },
     { cardType: 'truthOrDare', numberOfCards: 1 },
     { cardType: 'rockPaperScisors', numberOfCards: 1 },
+
+    // Cards that have max penalty!
+    { cardType: 'misc', numberOfCards: 1 },
   ];
 
+  console.log(deck);
 
   return deck;
 }
 
-function mergeDecks(targetDeck, sourceDeck) {
-  targetDeck.push(...sourceDeck);
+function shuffleCards(cards) {
+  for (let i = cards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [cards[i], cards[j]] = [cards[j], cards[i]];
+  }
+  return cards;
 }
+
+function assignNamesToCards(cards, names) {
+  // TODO replace "$name1" and "$name2" and "$name3" with names as appropriate
+
+  // Array of name objects to track usage of names and make even
+  const nameUsage = names.map(name => ({ name: name, usage: 0 }));
+
+//  for (const card of cards) {
+  // TODO this bit
+//    console.log(card);
+//  }
+  return cards;
+}
+
+export function populateCard(cards) {
+  const cardElements = document.querySelector('#card-component-container');
+  const cardTitle = cardElements.querySelector('#card-title');
+  const cardDesc = cardElements.querySelector('#card-description');
+
+  const topCard = cards[0];
+  cardTitle.textContent = topCard.title;
+  cardDesc.textContent = topCard.description;
+}
+
+export function addCardElements() {
+  const mainPage = document.querySelector('main');
+  const containedElements = generateCardElements();
+  mainPage.append(containedElements);
+}
+
 
 export async function getCardDeck(names) {
   // Merge appropriate decks (Includes all cards)
   const mergedDeck = getMergedCardDeck(names);
 
+  // Pick "types" of cards (i.e. rules, challenges, etc.)
   const cherryPickedDeck = cherryPickCards(mergedDeck);
 
+  // Randomize the deck order
   const shuffledDeck = await shuffleCards(cherryPickedDeck);
 
+  // Expand cards that need names (i.e. $name1 becomes "felix" etc)
   const nameAssigned = assignNamesToCards(shuffledDeck, names);
+
+  // Insert "later" or "after" cards (cards which require a 'stop that' or immedaite card afterwards)
 
   return nameAssigned;
 }
