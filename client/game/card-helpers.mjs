@@ -67,15 +67,33 @@ export async function getMergedCardDeck(names) {
   return workingDeck;
 }
 
+function cherryPickCards(deck) {
+  // Now make sure there's a good mix of cards
+  const cherryPickedDeck = [];
+  const deckMakeup = [
+    { cardType: 'rule', numberOfCards: 4 },
+    { cardType: 'describe', numberOfCards: 2 },
+    { cardType: 'misc', numberOfCards: 1 },
+    { cardType: 'challenge', numberOfCards: 2 },
+    { cardType: 'truthOrDare', numberOfCards: 1 },
+    { cardType: 'rockPaperScisors', numberOfCards: 1 },
+  ];
+
+
+  return deck;
+}
+
 function mergeDecks(targetDeck, sourceDeck) {
   targetDeck.push(...sourceDeck);
 }
 
 export async function getCardDeck(names) {
-  // Merge appropriate decks
+  // Merge appropriate decks (Includes all cards)
   const mergedDeck = getMergedCardDeck(names);
 
-  const shuffledDeck = await shuffleCards(mergedDeck);
+  const cherryPickedDeck = cherryPickCards(mergedDeck);
+
+  const shuffledDeck = await shuffleCards(cherryPickedDeck);
 
   const nameAssigned = assignNamesToCards(shuffledDeck, names);
 

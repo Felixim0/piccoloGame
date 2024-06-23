@@ -30,8 +30,7 @@ function setupEventListeners() {
 
 
 function init() {
-  // TODO re enable this!
-  // clearNames();
+  clearNames();
   setupEventListeners();
 }
 
