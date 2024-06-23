@@ -1,0 +1,69 @@
+#names-input {
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 1s;
+}
+
+main {
+  animation: swishColorChange 10s infinite; /* Infinite animation over 10 seconds */
+}
+
+button {
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 2s;
+}
+
+#play-button2 {
+  animation: spin 1s infinite; /* Infinite tilt animation over 6 seconds */
+  animation-delay: 1s;
+}
+
+#play-button3 {
+  animation-delay: 3s;
+}
+
+button:hover {
+  background-color: #98fb98; /* Slightly lighter green when hovered */
+}
+
+
+/* Keyframes for color change animation */
+@keyframes swishColorChange {
+  0% {
+    background-color: #f49ac2; /* Light pink */
+  }
+  25% {
+    background-color: #cb99c9; /* Lavender */
+  }
+  50% {
+    background-color: #c23b22; /* Light green */
+  }
+  75% {
+    background-color: #ffd1dc; /* Peach */
+  }
+  100% {
+    background-color: #f49ac2; /* Light pink */
+  }
+}
+
+/* Keyframes for tilt animation */
+@keyframes tilt {
+  25% {
+    transform: rotate(10deg); /* Rotate 20 degrees clockwise */
+  }
+  75% {
+    transform: rotate(-10deg); /* Rotate 20 degrees counter-clockwise */
+  }
+}
+
+/* Keyframes for spin animation */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); 
+  }
+  0% {
+    transform: rotate(0deg); 
+  }
+}
+
+
+

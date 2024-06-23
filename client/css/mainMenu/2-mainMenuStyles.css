@@ -1,0 +1,72 @@
+:root {
+    --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
+    --label-and-button-font-size: 1m;
+    --title-size: 3em;
+}
+
+/* Main Title of "Skrungle Pro"*/
+h2 {
+  font-family: 'Arial', sans-serif; /* Example of a different style font */
+  font-size: var(--title-size);
+  color: lightblue;
+  font-weight: bold; /* Makes the text bold */
+  text-shadow: 
+    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 #000,
+    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 #000,
+    var(--text-shadow-offset) var(--text-shadow-offset) 0 #000;
+  user-select: none; /* Prevent text selection */
+  cursor: default; /* Set cursor to the default type */
+}
+
+/* Input "Name" field */
+#names-input {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: orange; /* Background color */
+  border-radius: 0.625em; /* Rounded corners */
+  border: none; /* Remove default border */
+  padding: 0.625em; /* Padding inside the input box */
+  color: white; /* Font color */
+}
+
+/* Label styling */
+label {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: lightsalmon; /* Background color */
+  border-radius: 0.625em; /* Rounded corners */
+  border: none; /* Remove default border */
+  padding: 0.625em; /* Padding inside the input box */
+  animation: tilt 6s infinite; /* Infinite tilt animation over 6 seconds */
+}
+
+/* Button styling */
+button {
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
+  background-color: lightgreen; /* Light green background */
+  border: none; /* No border */
+  border-radius: 0.625em; /* Rounded corners */
+  padding: 0.625em 1.25em; /* Padding around the text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+  display: inline-block; /* Necessary for transform animations */
+}
+
+.play-button {
+  background-color: lightblue; /* Light green background */
+  animation-delay: 0.2s;
+  margin-top: 2em;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+
+#remove-name-button {
+  background-color: red;
+  animation-delay: 0.1s;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-right: 1em;
+}
+
