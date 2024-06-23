@@ -36,6 +36,30 @@ export const p0Cards = [
     description: 'Next player to look at their phone takes 10 penalties (except the game player)',
     penalty: 1,
   },
+  {
+    type: 'rule',
+    title: 'Next Player Privilege',
+    description: 'Next player to take a penalty can also give out the same penalty',
+    penalty: 1,
+  },
+  {
+    type: 'rule',
+    title: 'Question Master',
+    description: 'Next player to answer a question becomes Question Master',
+    penalty: 1,
+  },
+  {
+    type: 'rule',
+    title: 'M\'lady *tips fedora*',
+    description: 'Everyone must now be reffered to as "M\'lady" or "M\'lord". Forget? You take a penalty',
+    penalty: 1,
+    laterCard: {
+      type: 'rule',
+      title: 'Stop it you filthy pesants!',
+      description: 'Stop calling eachother "M\'lady" or "M\'lord".',
+      penalty: 2,
+    },
+  },
 
   // Describe
   {
@@ -154,6 +178,13 @@ export const p0Cards = [
     description: 'Everyone point to the person most liekly to get scared. They take 2 penalties',
     penalty: 1,
   },
+  {
+    type: 'mostLikelyTo',
+    title: 'Goofball',
+    description: 'Everyone point to the most goofy person. They take 2 penalties',
+    penalty: 1,
+  },
+
 
   // Misc special challnges
   {
@@ -186,6 +217,24 @@ export const p0Cards = [
     description: 'First player to down their drink can make someone else down their drink too!',
     penalty: 1,
   },
+  {
+    type: 'misc',
+    title: 'Second Shortest',
+    description: 'Second shortest player down your drink while making eye contact with the shortest player.',
+    penalty: 1,
+  },
+  {
+    type: 'misc',
+    title: 'Scubba',
+    description: 'Everyone hold their breath. First person to take a breath, down your drink!',
+    penalty: 1,
+  },
+  {
+    type: 'misc',
+    title: '',
+    description: '',
+    penalty: 1,
+  },
 
   // Vote
   {
@@ -215,13 +264,25 @@ export const p0Cards = [
   {
     type: 'vote',
     title: 'Scaredy Cat',
-    description: 'Vote: ',
+    description: 'Vote: Everyone point to the person most likely to get scared. They take 2 penalties',
     penalty: 1,
   },
   {
     type: 'vote',
-    title: '',
-    description: '',
+    title: 'Oliver Twisted',
+    description: 'Vote: Poorest player. Whoever it is, everyone give them some of your drink. They need the handout.',
+    penalty: 1,
+  },
+  {
+    type: 'vote',
+    title: 'Caffine Addict',
+    description: 'Vote: no coffee or no chcolate? Losing side takes 2 penalties.',
+    penalty: 1,
+  },
+  {
+    type: 'vote',
+    title: 'Caffine Addict',
+    description: 'Vote: no coffee or no tea? Losing side takes 2 penalties. (Don\'t drink either? 4 penalties for you!)',
     penalty: 1,
   },
 
@@ -427,8 +488,170 @@ export const p0Cards = [
   },
   {
     type: 'circumstantialPenalty',
-    title: '',
-    description: '',
+    title: 'Bad driver',
+    description: 'Take a penalty if you\'ve overtaken on the wrong side',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Speedy Boi',
+    description: 'Take 3 penalties if you\'ve ever been caught speeding',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Lovey Dovey',
+    description: 'If you\'ve said "I love you" in the last 2 weeks, take 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Lovey Dovey',
+    description: 'If you\'ve ever said "I love you" and not meant it, take 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Liar Liar',
+    description: 'If you\'ve ever lied to get out of a date, take 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Trouble in Paradise',
+    description: 'Couple who had an argument most recently, loser of that argument take 3 penalties.',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Happy Accident',
+    description: 'Whoever had the most recent pregnancy scare take 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Ouch!',
+    description: 'Take a penalty if you\'re single, 2 if you\'re in a relationship, 3 if it\'s complicated',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Baywatch',
+    description: 'If you\'ve ever worked as a lifeguard, give out 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Hospital-ity',
+    description: 'If you\'ve ever worked somewhere with petrol contaminated water, give out 5 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Oil be back',
+    description: 'Everyone who\'s ever worked for big oil, give out 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Nasty Habbit',
+    description: 'Anyone with a cigarette on them, take 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Crime Lord',
+    description: 'Take a penalty if you\'ve ever sent someone to hospital',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'NEEE-NAAWWW',
+    description: 'Give out 3 penalties if you\'ve ever driven someone to hopsital',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Faker!',
+    description: 'Don\'t use you\'re real name on Instagram? Take 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Relation-ship',
+    description: 'Everyone in a relationship give out 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'A-Void-Ance',
+    description: 'Used a Voi this year? Take 2 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Mr. Strong',
+    description: 'Player with the strongest drink, share it with 2 other people. One sipn each',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Homewrecker',
+    description: 'Take a penalty if you\'ve ever hooked up in a bed that isn\'t yours or your partners',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Sin',
+    description: 'Take a penalty if you\'ve ever had sex outside of marriage',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Arian Race',
+    description: 'Got blue eyes? Take a penalty. 6 if you also have blonde hair',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Strictly Business',
+    description: 'Take a penalty if you\'ve ever danced alone in front of a mirror',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Mr. Worldwide',
+    description: 'Current DJ - give out 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'UnderWhere?',
+    description: 'Take a penalty if you\'re wearing a thong',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Cutting it close?',
+    description: 'Take 3 penalties if you\'ve got work tomorrow',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Playa',
+    description: 'Take a penalty if you\'ve had sec in the last 48 hours. Take 8 penalties if it was 2 differnt people',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Body Count',
+    description: 'Take as many penalties as you have had sexual partners',
+    penalty: 1,
+  },
+  {
+    type: 'circumstantialPenalty',
+    title: 'Tactical',
+    description: 'Take as many drinks as times you\'ve had sex in the last 24 hours',
     penalty: 1,
   },
 
@@ -489,5 +712,76 @@ export const p0Cards = [
     description: 'Who wants 4 penalties? No volunteers? Everyone take 5.',
     penalty: 1,
   },
-
+  {
+    type: 'challenge',
+    title: 'Floor is Lava',
+    description: 'Next person to put their feet on the floor do 5 penalties. ',
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Family Man',
+    description: 'First person to message a family member give out a penalty for the nuber of siblings you have. ',
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Family Fun',
+    description: 'First player to dab gets to give out 3 penalties',
+    followingCard: {
+      type: 'challenge',
+      title: 'Dabbing Is Cool',
+      description: 'Anyone who didn\'t even try to dab, take 2 penalties',
+      penalty: 0,
+    },
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Standing Ovation',
+    description: 'Last player to stand up has to clap once and take a penalty',
+    followingCard: {
+      type: 'challenge',
+      title: 'Can\t stand this?',
+      description: 'Didn\'t even try to stand up? Take 2 penalties (wheelchair users not excluded)',
+      penalty: 0,
+    },
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Joker',
+    description: 'Next player to smile has to do one pushup. And 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: '#inspired',
+    description: 'Player to come up with the most inspirational saying give out 3 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Homelander',
+    description: 'First player to drink milk like Homelander give out 6 penalties',
+    penalty: 1,
+  },
+  {
+    type: 'challenge',
+    title: 'Licker, I barely knowher',
+    description: 'First player to lick their elbow, give out 3 penalties',
+    penalty: 1,
+    followingCard: {
+      type: 'challenge',
+      title: 'No Tounge Game?',
+      description: 'Didn\'t even try to lick your selbow? Take 6 penalties',
+      penalty: 0,
+    },
+  },
+  {
+    type: 'challenge',
+    title: 'CornHub',
+    description: 'Choose a partner and demo your favourite position. Give out 3 penalties if you do. Take 6 if you dont\'t demo',
+    penalty: 1,
+  },
 ];
