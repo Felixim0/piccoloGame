@@ -130,11 +130,18 @@ export const p0Cards = [
     usedAlready: false,
     assignedTo: [],
   },
-
   {
     type: 'mostLikelyTo',
     title: 'Most Likely To',
     description: 'Everyone point to the person who is the subbiest slut',
+    penalty: 1,
+    usedAlready: false,
+    assignedTo: [],
+  },
+  {
+    type: 'misc',
+    title: 'Big Man',
+    description: 'Big man. Everyone do 10 pressups.',
     penalty: 1,
     usedAlready: false,
     assignedTo: [],
