@@ -37,15 +37,17 @@ export async function getMergedCardDeck(names) {
 function cherryPickCards(deck) {
   // Now make sure there's a good mix of cards
   const cherryPickedDeck = [];
+
+  // Chance of picking is out of 100
   const deckMakeup = [
-    { cardType: 'rule', numberOfCards: 4 },
-    { cardType: 'describe', numberOfCards: 2 },
-    { cardType: 'challenge', numberOfCards: 2 },
-    { cardType: 'truthOrDare', numberOfCards: 1 },
-    { cardType: 'rockPaperScisors', numberOfCards: 1 },
+    { cardType: 'rule', chanceOfPicking: 50 },
+    { cardType: 'describe', chanceOfPicking: 10 },
+    { cardType: 'challenge', chanceOfPicking: 10 },
+    { cardType: 'truthOrDare', chanceOfPicking: 10 },
+    { cardType: 'rockPaperScisors', chanceOfPicking: 15 },
 
     // Cards that have max penalty!
-    { cardType: 'misc', numberOfCards: 1 },
+    { cardType: 'misc', chanceOfPicking: 5 },
   ];
 
   console.log(deck);
@@ -67,10 +69,6 @@ function assignNamesToCards(cards, names) {
   // Array of name objects to track usage of names and make even
   const nameUsage = names.map(name => ({ name: name, usage: 0 }));
 
-//  for (const card of cards) {
-  // TODO this bit
-//    console.log(card);
-//  }
   return cards;
 }
 
