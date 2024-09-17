@@ -22,22 +22,22 @@
 
   text-align: center; 
   text-transform: uppercase; /* Make text all caps */
-  font-family: 'Fredoka One', cursive, sans-serif;
+  font-family: "Impact", "Haettenschweiler", sans-serif;
   font-size: var(--title-size);
   color: white;
   font-weight: bold; /* Makes the text bold */
   text-shadow: 
-    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 #000,
-    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 #000,
-    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 #000,
-    var(--text-shadow-offset) var(--text-shadow-offset) 0 #000;
-}
+    1px 1px 0 black,  /* Bottom-right shadow */
+    -1px 1px 0 black, /* Bottom-left shadow */
+    1px -1px 0 black, /* Top-right shadow */
+    -1px -1px 0 black; 
+ 
+  }
  
 #card-description {
   user-select: none; /* Prevent text selection */
   text-transform: uppercase; /* Make text all caps */
-
-  font-family: 'Bangers', cursive, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: var(--description-size);
   color: black;
   text-shadow: 

@@ -14,7 +14,7 @@ h3 {
   position: absolute; /* Absolute positioning within the full-page-container */
   color: black; /* Text color, can be changed as needed */
   font-size: 4em; /* Larger font size for visibility */
-  font-family: 'Fredoka One', cursive;
+  font-family: "Papyrus", fantasy;
   animation: pulseWobble 4s infinite;
 }
 
