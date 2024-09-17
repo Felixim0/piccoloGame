@@ -9,7 +9,7 @@ export function switchFromMainMenuTo() {
   appendClass([mainMenu], 'invisible');
 
   // Remove the main menu stylesheets
-  const mainMenuStylesheets = document.querySelectorAll('.mainMenuStylesheet');
+  const mainMenuStylesheets = document.querySelectorAll('.mainMenuStyleSheet');
   for (const styleSheet of mainMenuStylesheets) {
     styleSheet.remove();
   }
