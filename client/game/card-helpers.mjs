@@ -1,4 +1,7 @@
 import { generateCardElements } from '../helpers/element-creation.mjs';
+import { p0Cards } from './cards/p0Cards.mjs';
+import { p1Cards } from './cards/p1Cards.mjs';
+import { p2Cards } from './cards/p2Cards.mjs';
 
 function getDecksToAdd(names) {
   console.log(names);
@@ -9,28 +12,17 @@ function mergeDecks(targetDeck, sourceDeck) {
   targetDeck.push(...sourceDeck);
 }
 
-export async function getMergedCardDeck(names) {
+export function getMergedCardDeck(names) {
   // Add appropriate card deck names
   const decksToAdd = getDecksToAdd(names);
 
   // Setup workingDeck to update with decks from decksToAdd
   const workingDeck = [];
 
-  // Load and merge the decks asynchronously
-  for (const deckToAdd of decksToAdd) {
-    try {
-      const module = await import(`/game/cards/${deckToAdd}.mjs`);
+  if (decksToAdd.includes('p0Cards')) { mergeDecks(workingDeck, p0Cards); }
+  if (decksToAdd.includes('p1Cards')) { mergeDecks(workingDeck, p1Cards); }
+  if (decksToAdd.includes('p2Cards')) { mergeDecks(workingDeck, p2Cards); }
 
-      // Verify the expected property is in the module
-      if (module[deckToAdd]) {
-        mergeDecks(workingDeck, module[deckToAdd]);
-      } else {
-        console.error(`Expected property ${deckToAdd} not found in module`);
-      }
-    } catch (error) {
-      console.error(`Failed to load deck ${deckToAdd}:`, error);
-    }
-  }
   return workingDeck;
 }
 
