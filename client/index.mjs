@@ -1,6 +1,7 @@
 import { placeNewName } from './helpers/element-creation.mjs';
 import { addName, clearNames } from './helpers/local-storage.mjs';
 import { startGame, removeLastName } from './game/setup.mjs';
+import { setScreenLockToPortrait } from './helpers/screen-orientation.mjs';
 
 function setupEventListeners() {
   const addNameButton = document.querySelector('#add-name-button');
@@ -32,7 +33,13 @@ function setupEventListeners() {
 
 function init() {
   console.log('Initialised start script');
+
+  // Set the initial screenlock orientation to portrait-primary
+  setScreenLockToPortrait();
+
+  // Clear Previous Names
   clearNames();
+
   setupEventListeners();
 }
 
