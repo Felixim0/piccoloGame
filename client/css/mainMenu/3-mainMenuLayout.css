@@ -16,6 +16,13 @@
   justify-content: center;
 }
 
+#names-controllers-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 2em;
+}
 
 #middle-menu {
   display: flex;
