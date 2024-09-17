@@ -29,6 +29,11 @@
       "type": "image/png"
     },
     {
+      "src": "/pwa/icons/pngs/pic-256x256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
       "src": "/pwa/icons/pngs/pic-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
