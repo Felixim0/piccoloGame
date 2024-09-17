@@ -8,9 +8,6 @@ export function switchFromMainMenuTo() {
   const mainMenu = document.querySelector('#main-menu');
   appendClass([mainMenu], 'invisible');
 
-  const namesContainer = document.querySelector('#full-page-container');
-  appendClass([namesContainer], 'invisible');
-
   // Remove the main menu stylesheets
   const mainMenuStylesheets = document.querySelectorAll('.mainMenuStylesheet');
   for (const styleSheet of mainMenuStylesheets) {
