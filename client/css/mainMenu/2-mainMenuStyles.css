@@ -57,16 +57,10 @@ button {
 .play-button {
   background-color: lightblue; /* Light green background */
   animation-delay: 0.2s;
-  margin-top: 2em;
-  padding-left: 3em;
-  padding-right: 3em;
 }
 
 #remove-name-button {
   background-color: red;
   animation-delay: 0.1s;
-  padding-left: 1em;
-  padding-right: 1em;
-  margin-right: 1em;
 }
 
