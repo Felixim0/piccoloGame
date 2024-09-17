@@ -67,18 +67,12 @@ export function generateCardElements() {
 }
 
 export function placeNewName(name) {
-  const container = document.querySelector('#full-page-container');
+  const container = document.querySelector('#names-container');
 
-  // Create new name h3
-  const newNameElement = crEl('h3');
+  // Create new name list item
+  const newNameElement = crEl('li');
   newNameElement.textContent = name;
   newNameElement.id = name;
-
-  // Place Randomly on page
-  const x = Math.random() * (container.clientWidth - newNameElement.clientWidth);
-  const y = Math.random() * (container.clientHeight - newNameElement.clientHeight);
-  newNameElement.style.left = x + 'px';
-  newNameElement.style.top = y + 'px';
 
   container.append(newNameElement);
 }

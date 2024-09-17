@@ -17,6 +17,7 @@ function setupEventListeners() {
   const playButton = document.querySelector('#play-button2');
   // const randomPlayButton = playButtons[Math.floor(Math.random() * playButtons.length)];
   playButton.addEventListener('click', () => {
+    console.log('Starting game');
     startGame();
   });
 
@@ -30,6 +31,7 @@ function setupEventListeners() {
 
 
 function init() {
+  console.log('Initialised start script');
   clearNames();
   setupEventListeners();
 }
