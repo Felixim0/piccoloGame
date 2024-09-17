@@ -5,11 +5,11 @@ import { getCardDeck } from './card-helpers.mjs';
 
 export function switchFromMainMenuTo() {
   // Make the main menu invisible
-  const mainMenu = document.querySelector('#main-menu');
+  const mainMenu = document.querySelector('#title-and-options-container');
   appendClass([mainMenu], 'invisible');
 
   // Remove the main menu stylesheets
-  const mainMenuStylesheets = document.querySelectorAll('.mainMenuStylesheet');
+  const mainMenuStylesheets = document.querySelectorAll('.mainMenuStyleSheet');
   for (const styleSheet of mainMenuStylesheets) {
     styleSheet.remove();
   }
