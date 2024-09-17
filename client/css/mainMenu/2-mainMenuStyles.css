@@ -4,6 +4,10 @@
     --title-size: 3em;
 }
 
+main {
+  height: 100vh; 
+}
+
 /* Main Title of "Skrungle Pro"*/
 h2 {
   font-family: 'Arial', sans-serif; /* Example of a different style font */
@@ -17,12 +21,10 @@ h2 {
     -1px -1px 0 black; 
   user-select: none; /* Prevent text selection */
   cursor: default; /* Set cursor to the default type */
+  padding-top: .4em;
 }
 
-#names-container{
-  padding-top: .4em;
-  padding-bottom: 1.3em;
-}
+
 /* Input "Name" field */
 #names-input {
   font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
