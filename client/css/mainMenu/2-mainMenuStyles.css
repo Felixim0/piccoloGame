@@ -1,6 +1,6 @@
 :root {
     --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
-    --label-and-button-font-size: 1m;
+    --label-and-button-font-size: 2m;
     --title-size: 3em;
 }
 
@@ -27,7 +27,7 @@ h2 {
 
 /* Input "Name" field */
 #names-input {
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-family: "Papyrus", fantasy;
   font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: orange; /* Background color */
   border-radius: 0.625em; /* Rounded corners */
@@ -38,7 +38,7 @@ h2 {
 
 /* Label styling */
 label {
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-family: "Papyrus", fantasy;
   font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: lightsalmon; /* Background color */
   border-radius: 0.625em; /* Rounded corners */
@@ -49,7 +49,7 @@ label {
 
 /* Button styling */
 button {
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun font */
+  font-family: "Papyrus", fantasy;
   font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: lightgreen; /* Light green background */
   border: none; /* No border */
@@ -58,6 +58,7 @@ button {
   cursor: pointer; /* Pointer cursor on hover */
   transition: background-color 0.3s; /* Smooth transition for background color */
   display: inline-block; /* Necessary for transform animations */
+  margin-left: 1em;;
 }
 
 .play-button {
@@ -65,8 +66,15 @@ button {
   animation-delay: 0.2s;
 }
 
+#play-button2 {
+  padding-left: 4em;
+  padding-right: 4em;
+}
+
 #remove-name-button {
   background-color: red;
   animation-delay: 0.1s;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 

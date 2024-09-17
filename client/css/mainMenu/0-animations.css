@@ -17,10 +17,6 @@ button {
   animation-delay: 1s;
 }
 
-#play-button3 {
-  animation-delay: 3s;
-}
-
 button:hover {
   background-color: #98fb98; /* Slightly lighter green when hovered */
 }
