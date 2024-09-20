@@ -16,7 +16,7 @@ export function switchFromMainMenuTo() {
 
   // Add the game stylesheets
   const gameStylesheets = ['all', 'background', 'foreground'];
-  addMultipleStylesheets('./css/game/', gameStylesheets, 'gameStyles');
+  addMultipleStylesheets('/client/css/game/', gameStylesheets, 'gameStyles');
 }
 
 function getRandomDifferentNumber(max, current) {
