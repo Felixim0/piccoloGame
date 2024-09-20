@@ -1,4 +1,5 @@
-const CACHE = 'piccolo';
+const CACHE = 'piccolo-v1';
+
 
 const FILES = [
   './',
