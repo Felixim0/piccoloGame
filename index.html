@@ -1,9 +1,52 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<title>Pickaloe</title>
+<meta charset=utf-8>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <head>
-  <meta http-equiv="Refresh" content="0; url='client/index.html'" />
+  <link rel="icon" href="client/pwa/icons/icons/pic-64x64.ico" type="image/x-icon">
+
+  <link rel="manifest" href="index.webmanifest">
+
+  <!-- Styles for the menu -->
+  <div id="styles">
+    <link rel="stylesheet" type="text/css" class="mainMenuStyleSheet" href="client/css/mainMenu/3-mainMenuLayout.css">
+    <link rel="stylesheet" type="text/css" class="mainMenuStyleSheet" href="client/css/mainMenu/2-mainMenuStyles.css">
+    <link rel="stylesheet" type="text/css" class="mainMenuStyleSheet"  href="client/css/mainMenu/1-userNames.css">
+    <link rel="stylesheet" type="text/css" class="mainMenuStyleSheet"  href="client/css/mainMenu/0-animations.css">
+  </div>
 </head>
-<body>
-  <p>If you are not redirected, <a href="client/index.html">click here</a> to continue.</p>
-</body>
-</html>
+
+<script src="worker.js"></script>
+
+<script type="module" src="index.mjs" ></script>
+
+<main>
+  <div id="title-and-options-container">
+
+    <div id="title-container">
+      <h2>SKRUNGGLE</h2>
+      <h2>PRO</h2>
+    </div>
+
+    <ul id="names-container">
+    </ul>
+
+    <div id="middle-menu">
+      <div id="names-controllers-container">
+        <label for="names-input">"Names:"</label>
+        <input id="names-input" type="text" placeholder="Your name here...">
+        <button id="add-name-button">Add</button>
+      </div>
+
+      <div id="play-button-container">
+        <button class="play-button" id="remove-name-button">Remove Name</button>
+        <button class="play-button" id="play-button2">PLAY</button>
+      </div>
+    </div>
+
+  </div>
+
+<div id="full-page-container"></div>
+
+</main>
