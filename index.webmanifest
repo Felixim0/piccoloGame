@@ -2,53 +2,53 @@
   "name": "Piccaloe",
   "short_name": "pic",
   "description": "Fun challenge / drinking / dare game.",
-  "start_url": "/client/",
+  "start_url": "/piccologame/",
   "display": "standalone",
   "theme_color": "#336699",
   "background_color": "#FFFFFF",
 
   "icons": [
     {
-      "src": "./pwa/icons/pngs/pic-16x16.png",
+      "src": "client/pwa/icons/pngs/pic-16x16.png",
       "sizes": "16x16",
       "type": "image/png"
     },
     {
-      "src": "./pwa/icons/pngs/pic-32x32.png",
+      "src": "client/pwa/icons/pngs/pic-32x32.png",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "./pwa/icons/pngs/pic-64x64.png",
+      "src": "client/pwa/icons/pngs/pic-64x64.png",
       "sizes": "64x64",
       "type": "image/png"
     },
     {
-      "src": "./pwa/icons/pngs/pic-128x128.png",
+      "src": "client/pwa/icons/pngs/pic-128x128.png",
       "sizes": "128x128",
       "type": "image/png"
     },
     {
-      "src": "./pwa/icons/pngs/pic-256x256.png",
+      "src": "client/pwa/icons/pngs/pic-256x256.png",
       "sizes": "256x256",
       "type": "image/png"
     },
     {
-      "src": "./pwa/icons/pngs/pic-512x512.png",
+      "src": "client/pwa/icons/pngs/pic-512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }
   ],
     "screenshots": [
     {
-     "src": "./pwa/screenshots/wide/wide1.png",
+     "src": "client/pwa/screenshots/wide/wide1.png",
      "sizes": "2396×1542",
      "type": "image/gif",
      "form_factor": "wide",
      "label": "Homescreen Piccaloe"
     },
     {
-     "src": "./pwa/screenshots/narrow/narrow.png",
+     "src": "client/pwa/screenshots/narrow/narrow.png",
       "sizes": "1120×1580",
       "type": "image/gif",
       "form_factor": "narrow",

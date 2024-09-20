@@ -1,4 +1,5 @@
 const CACHE = 'piccolo';
+
 const FILES = [
   './',
   './index.css',
