@@ -8,4 +8,4 @@ Run    `node . `
 
 
 # Install as a PWA
-In theory this game is runnable as a progressive web app and should be offered as an install through github pages https://felixim0.github.io/piccoloGame/client/ 
+In theory this game is runnable as a progressive web app and should be offered as an install through github pages https://felixim0.github.io/piccoloGame/ 
