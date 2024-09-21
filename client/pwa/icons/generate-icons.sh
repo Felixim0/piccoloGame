@@ -4,7 +4,7 @@
 mkdir -p icons pngs
 
 # Array of required sizes
-sizes=(16 32 48 64 128 256 512 1024)
+sizes=(16 32 48 64 128 192 256 512 1024)
 
 # Loop through the sizes and create images
 for size in "${sizes[@]}"; do
