@@ -1,55 +1,42 @@
 :root {
-    --text-shadow-offset: 0.0160em; /* Shadow offset defined as a variable */
-    --desc-colour-outline: white;
-    --title-size: 3em;
-    --description-size: 1em;
-}
+  --text-shadow-offset: 0.0160em; /* Shadow offset defined as a variable */
+  --desc-colour-outline: black;
+  --title-size: 6em;
+  --description-size: 8em;
 
+  --text-shadow: 
+    1px 1px 0 var(--desc-colour-outline),  
+    -1px 1px 0 var(--desc-colour-outline), 
+    1px -1px 0 var(--desc-colour-outline),
+    -1px -1px 0 var(--desc-colour-outline);
+}
 
 #card-component-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full viewport height */
+
+  height: 100vh;
 }
 
 #card-title {
-  user-select: none; /* Prevent text selection */
-  cursor: default; /* Set cursor to the default type */
+  font-size: 4vw; /* Adjust this value as needed */
 
-  max-width: 70vw; /* Ensure it doesn't exceed 70% of the viewport width */
-
-  text-align: center; 
-  text-transform: uppercase; /* Make text all caps */
-  font-family: "Impact", "Haettenschweiler", sans-serif;
-  font-size: var(--title-size);
+  user-select: none;
+  text-align: center;
+  text-transform: uppercase; 
   color: white;
-  font-weight: bold; /* Makes the text bold */
-  text-shadow: 
-    1px 1px 0 black,  /* Bottom-right shadow */
-    -1px 1px 0 black, /* Bottom-left shadow */
-    1px -1px 0 black, /* Top-right shadow */
-    -1px -1px 0 black; 
- 
-  }
- 
-#card-description {
-  user-select: none; /* Prevent text selection */
-  text-transform: uppercase; /* Make text all caps */
-  font-family: "Courier New", Courier, monospace;
-  font-size: var(--description-size);
-  color: black;
-  text-shadow: 
-    calc(-1 * var(--text-shadow-offset)) calc(-1 * var(--text-shadow-offset)) 0 var(--desc-colour-outline),
-    var(--text-shadow-offset) calc(-1 * var(--text-shadow-offset)) 0 var(--desc-colour-outline),
-    calc(-1 * var(--text-shadow-offset)) var(--text-shadow-offset) 0 var(--desc-colour-outline),
-    var(--text-shadow-offset) var(--text-shadow-offset) 0 var(--desc-colour-outline);
-
-  width: 70%;
-  max-width: 70vw; /* Ensure it doesn't exceed 70% of the viewport width */
-  margin: 0 auto; /* Center the element horizontally */
-  text-align: center; 
-  letter-spacing: 0.08em; 
-
+  text-shadow: var(--text-shadow);
 }
+
+#card-description {
+  font-size: 6vw; /* Adjust this value as needed */
+
+  user-select: none;
+  text-align: center;
+  text-transform: uppercase; 
+  color: white;
+  text-shadow: var(--text-shadow);
+}
+
