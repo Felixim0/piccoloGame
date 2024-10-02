@@ -1,8 +1,0 @@
-[{
-      "relation": ["delegate_permission/common.handle_all_urls"],
-      "target": {
-        "namespace": "android_app",
-        "package_name": "io.github.felixim0.twa",
-        "sha256_cert_fingerprints": ["8D:3F:53:50:AF:BA:86:88:6B:44:9A:79:4E:28:2D:EA:86:96:B1:50:76:18:E8:A5:F1:8A:58:28:45:D6:4B:48"]
-      }
-    }]
