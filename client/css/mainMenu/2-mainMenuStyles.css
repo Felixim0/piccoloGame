@@ -1,7 +1,14 @@
 :root {
-    --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
-    --label-and-button-font-size: 2m;
-    --title-size: 3em;
+  --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
+  --label-and-button-font-size: 1.6vw;
+  --title-size: 8em;
+  --desc-colour-outline: black;
+
+  --text-shadow: 
+    1px 1px 0 var(--desc-colour-outline),  
+    -1px 1px 0 var(--desc-colour-outline), 
+    1px -1px 0 var(--desc-colour-outline),
+    -1px -1px 0 var(--desc-colour-outline);
 }
 
 main {
@@ -14,21 +21,21 @@ h2 {
   font-size: var(--title-size);
   color: lightblue;
   font-weight: bold; /* Makes the text bold */
-  text-shadow: 
-    1px 1px 0 black,  /* Bottom-right shadow */
-    -1px 1px 0 black, /* Bottom-left shadow */
-    1px -1px 0 black, /* Top-right shadow */
-    -1px -1px 0 black; 
+  text-shadow: var(--text-shadow);
   user-select: none; /* Prevent text selection */
   cursor: default; /* Set cursor to the default type */
   padding-top: .4em;
 }
 
 
+/* Give all children font size of var(--label-and-button-font-size) */
+#middle-menu * {
+  font-size: var(--label-and-button-font-size);
+}
+
 /* Input "Name" field */
 #names-input {
   font-family: "Papyrus", fantasy;
-  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: orange; /* Background color */
   border-radius: 0.625em; /* Rounded corners */
   border: none; /* Remove default border */
@@ -39,7 +46,6 @@ h2 {
 /* Label styling */
 label {
   font-family: "Papyrus", fantasy;
-  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: lightsalmon; /* Background color */
   border-radius: 0.625em; /* Rounded corners */
   border: none; /* Remove default border */
@@ -50,7 +56,6 @@ label {
 /* Button styling */
 button {
   font-family: "Papyrus", fantasy;
-  font-size: var(--label-and-button-font-size); /* Larger than usual font size */
   background-color: lightgreen; /* Light green background */
   border: none; /* No border */
   border-radius: 0.625em; /* Rounded corners */
