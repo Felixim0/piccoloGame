@@ -1,7 +1,7 @@
 :root {
   --text-shadow-offset: 0.0125em; /* Shadow offset defined as a variable */
-  --label-and-button-font-size: 1.6vw;
-  --title-size: 8em;
+  --label-and-button-font-size: 1em;
+  --title-size: 3em;
   --desc-colour-outline: black;
 
   --text-shadow: 
