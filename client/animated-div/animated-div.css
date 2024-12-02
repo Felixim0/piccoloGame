@@ -1,0 +1,31 @@
+/* Set margin and padding to 0 for all elements */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.card {
+  margin: 0 auto;
+  width: 300px;
+  padding: 2em;
+  background: #1c2f2b;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  padding: 2em;
+  z-index: 1;
+}

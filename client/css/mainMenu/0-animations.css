@@ -4,7 +4,7 @@
 }
 
 main {
-  animation: swishColorChange 10s infinite; /* Infinite animation over 10 seconds */
+  background-color: #808080
 }
 
 button {
@@ -21,25 +21,6 @@ button:hover {
   background-color: #98fb98; /* Slightly lighter green when hovered */
 }
 
-
-/* Keyframes for color change animation */
-@keyframes swishColorChange {
-  0% {
-    background-color: #f49ac2; /* Light pink */
-  }
-  25% {
-    background-color: #cb99c9; /* Lavender */
-  }
-  50% {
-    background-color: #c23b22; /* Light green */
-  }
-  75% {
-    background-color: #ffd1dc; /* Peach */
-  }
-  100% {
-    background-color: #f49ac2; /* Light pink */
-  }
-}
 
 /* Keyframes for tilt animation */
 @keyframes tilt {
