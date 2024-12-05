@@ -4,7 +4,7 @@ import { p1Cards } from './cards/p1Cards.mjs';
 import { p2Cards } from './cards/p2Cards.mjs';
 
 function getDecksToAdd(names) {
-  // Take an array of names, return an array of deck names "p0Cards"... to include 
+  // Take an array of names, return an array of deck names "p0Cards"... to include
   const decksToAdd = [];
   const lengthOfNames = names.length;
   let counter = 0;
@@ -37,7 +37,7 @@ export function getMergedCardDeck(names) {
   return workingDeck;
 }
 
-function cherryPickCards(deck) {
+function cherryPickCards(deck, lengthOfDeck) {
   // Now make sure there's a good mix of cards
   const cherryPickedDeck = [];
 
@@ -53,7 +53,21 @@ function cherryPickCards(deck) {
     { cardType: 'misc', chanceOfPicking: 5 },
   ];
 
-  return deck;
+  // Loop number of times in lenthOfDeck
+  for (let i = 0; i < lengthOfDeck; i++) {
+    const randomNum = Math.floor(Math.random() * 100);
+    for (const { cardType, chanceOfPicking } of deckMakeup) {
+      if (randomNum <= chanceOfPicking) {
+        cardType = cardType;
+        break;
+      }
+    }
+
+    const card = deck.find(card => card.type === cardType);
+    cherryPickedDeck.push(card);
+  }
+
+  return cherryPickedDeck;
 }
 
 function shuffleCards(cards) {
@@ -102,11 +116,8 @@ export async function getCardDeck(names) {
   // Randomize the deck order
   const shuffledDeck = await shuffleCards(cherryPickedDeck);
 
-  // Select only the top 20 cards
-  const top20Cards = shuffledDeck.slice(0, 20);
-
   // Expand cards that need names (i.e. $name1 becomes "felix" etc)
-  const nameAssigned = assignNamesToCards(top20Cards, names);
+  const nameAssigned = assignNamesToCards(shuffledDeck, names);
 
   // Insert "later" or "after" cards (cards which require a 'stop that' or immedaite card afterwards)
 
