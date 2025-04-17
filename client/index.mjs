@@ -3,15 +3,25 @@ import { addName, clearNames } from './helpers/local-storage.mjs';
 import { startGame, removeLastName } from './game/setup.mjs';
 import { setScreenLockToPortrait } from './helpers/screen-orientation.mjs';
 
+function limitNameLength(newName) {
+  // Truncate names to the first 10 characters
+  let finalName = newName;
+  if (newName.length > 10) {
+    finalName = newName.substring(0, 10);
+  }
+  return finalName;
+}
+
 function setupEventListeners() {
   const addNameButton = document.querySelector('#add-name-button');
   addNameButton.addEventListener('click', () => {
     const nameInput = document.querySelector('input');
     const nameValue = nameInput.value;
+    const nameLimited = limitNameLength(nameValue);
     if (nameValue !== '') {
-      addName(nameInput.value);
+      addName(nameLimited);
       nameInput.value = '';
-      placeNewName(nameValue);
+      placeNewName(nameLimited);
     }
   });
 
